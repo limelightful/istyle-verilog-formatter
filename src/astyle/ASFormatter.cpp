@@ -134,7 +134,7 @@ void ASFormatter::staticInit()
     preprocessorHeaders.push_back(&PRO_CELLDEFINE           );
     preprocessorHeaders.push_back(&PRO_DEFAULT_NETTYPE      );
     preprocessorHeaders.push_back(&PRO_DEFINE               );
-    preprocessorHeaders.push_back(&AS_ELSE);
+    preprocessorHeaders.push_back(&PRO_ELSE);
     preprocessorHeaders.push_back(&PRO_ENDCELLDEFINE        );
     preprocessorHeaders.push_back(&PRO_ENDIF                );
     preprocessorHeaders.push_back(&PRO_IFDEF                );
