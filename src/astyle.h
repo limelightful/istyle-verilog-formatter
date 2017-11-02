@@ -82,7 +82,7 @@ class ASResource
         static const string AS_OPEN_LINE_COMMENT, AS_OPEN_COMMENT, AS_CLOSE_COMMENT;
         //  process
 
-        static const string PRO_CELLDEFINE, PRO_DEFAULT_NETTYPE, PRO_DEFINE, PRO_ELSE;
+        static const string PRO_CELLDEFINE, PRO_DEFAULT_NETTYPE, PRO_DEFINE, PRO_ELSE, PRO_ELSIF;
 
         static const string PRO_ENDCELLDEFINE, PRO_ENDIF, PRO_IFDEF, PRO_INCLUDE;
 

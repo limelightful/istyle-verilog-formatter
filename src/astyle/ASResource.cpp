@@ -56,6 +56,8 @@ const string ASResource::PRO_DEFINE                = string("`define");
 
 const string ASResource::PRO_ELSE                  = string("`else");
 
+const string ASResource::PRO_ELSIF                 = string("`elsif");
+
 const string ASResource::PRO_ENDCELLDEFINE         = string("`endcelldefine");
 
 const string ASResource::PRO_ENDIF                 = string("`endif");
