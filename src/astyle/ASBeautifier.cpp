@@ -220,6 +220,7 @@ ASBeautifier::ASBeautifier(const ASBeautifier &other)
     preprocessorIndent = other.preprocessorIndent;
     parenDepth = other.parenDepth;
     indentLength = other.indentLength;
+    shouldForceTabIndentation = other.shouldForceTabIndentation;
 
     leadingWhiteSpaces = other.leadingWhiteSpaces;
     maxInStatementIndent = other.maxInStatementIndent;
