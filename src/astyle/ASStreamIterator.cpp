@@ -54,7 +54,7 @@ ASStreamIterator::ASStreamIterator(istream *in)
 
 ASStreamIterator::~ASStreamIterator()
 {
-    delete inStream;
+    //delete inStream;
 }
 
 
@@ -84,6 +84,7 @@ string ASStreamIterator::nextLine()
     ++linecount;
     return buffer;
 }
+
 
 #ifdef USES_NAMESPACE
 }

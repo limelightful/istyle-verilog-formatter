@@ -724,7 +724,8 @@ int main(int argc, char *argv[])
                 exit(1);
             }
 
-            formatter.init( new ASStreamIterator(&in) );
+            ASStreamIterator temp(&in);
+            formatter.init( &temp );
             while (formatter.hasMoreLines() )
             {
                 out << formatter.nextLine();

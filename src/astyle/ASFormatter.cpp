@@ -87,6 +87,7 @@ ASFormatter::ASFormatter()
 ASFormatter::~ASFormatter()
 {
     DELETE_CONTAINER( preBracketHeaderStack );
+    DELETE_CONTAINER( parenStack );
 }
 
 /**

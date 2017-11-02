@@ -246,12 +246,22 @@ ASBeautifier::ASBeautifier(const ASBeautifier &other)
 ASBeautifier::~ASBeautifier()
 {
     DELETE_CONTAINER( headerStack );
+    while (!tempStacks->empty())
+    {
+        vector<const string*> *temp =  tempStacks->back();
+        tempStacks->pop_back();
+        delete temp;
+    }
     DELETE_CONTAINER( tempStacks );
     DELETE_CONTAINER( blockParenDepthStack );
 
     DELETE_CONTAINER( inStatementIndentStack );
     DELETE_CONTAINER( inStatementIndentStackSizeStack );
     DELETE_CONTAINER( parenIndentStack );
+    DELETE_CONTAINER( waitingBeautifierStack );
+    DELETE_CONTAINER( activeBeautifierStack );
+    DELETE_CONTAINER( waitingBeautifierStackLengthStack );
+    DELETE_CONTAINER( activeBeautifierStackLengthStack );
 }
 
 /**
@@ -284,6 +294,12 @@ void ASBeautifier::init()
     INIT_CONTAINER( activeBeautifierStackLengthStack, new vector<int> );
 
     INIT_CONTAINER( headerStack,  new vector<const string*> );
+    while (tempStacks != NULL && !tempStacks->empty())
+    {
+        vector<const string*> *temp =  tempStacks->back();
+        tempStacks->pop_back();
+        delete temp;
+    }
     INIT_CONTAINER( tempStacks, new vector< vector<const string*>* > );
     tempStacks->push_back(new vector<const string*>);
 
